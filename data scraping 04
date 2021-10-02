@@ -1,0 +1,20 @@
+from selenium import webdriver
+from bs4 import BeautifulSoup
+
+driver = webdriver.Chrome()
+url = "https://www.melon.com/chart/index.htm"
+driver.get(url)
+
+html = driver.page_source
+soup = BeautifulSoup(html, "html.parser")
+songs = soup.select("tr")[1:]
+
+song = songs[0]
+title = song.select('a')
+print(len(title))
+title = song.select('span > a')
+print(len(title))
+title = song.select('div.ellipsis.rank01 > span > a')
+print(len(title))
+title = song.select('div.ellipsis.rank01 > span > a')[0].text
+print(title)
