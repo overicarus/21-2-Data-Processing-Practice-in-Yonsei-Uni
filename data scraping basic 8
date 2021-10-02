@@ -1,0 +1,24 @@
+from bs4 import BeautifulSoup
+# 분석 대상 HTML --- (1)
+html = """
+<html><body>
+<div id="meigen">
+  <h1>정보처리연습</h1>
+  <ul class = "itens">
+    <li>웹 크롤링과 웹 스크레이핑</li>
+    <li>데이터 전처리</li>
+    <li>데이터 분석</li>
+  </ul>
+</div>
+</body></html>
+"""
+# HTML 분석하기 --- (2)
+soup = BeautifulSoup(html, "html.parser")
+# 필요한 부분을 CSS 쿼리로 추출하기
+# 타이틀 부분 추출하기 --- (3)
+h1 = soup.select_one("div#meigen > h1").string
+print("h1 =", h1)
+# 목록 부분 추출하기 --- (4)
+li_list = soup.select("div#meigen > ul.items > li")
+for li in li_list:
+    print("li=", li.string)
