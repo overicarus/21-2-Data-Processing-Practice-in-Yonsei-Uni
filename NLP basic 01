@@ -1,0 +1,18 @@
+sentence = "The quick brown fox jumps over the lazy dog"
+
+print('quick' in sentence)
+print(sentence.index('fox'))
+print(sentence.split().index('lazy'))
+print(sentence.split()[2])
+print(sentence.split()[2][::-1])
+
+words = sentence.split()
+first_word = words[0]
+last_word = words[len(words)-1]
+concat_word = first_word + last_word
+print(concat_word)
+
+print([words[i] for i in range(len(words)) if i % 2 == 0])
+print(sentence[-3:])
+print(sentence[::-1])
+print(' '.join([word[::-1] for word in words]))
