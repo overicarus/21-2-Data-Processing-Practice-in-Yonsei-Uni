@@ -1,0 +1,8 @@
+import nltk
+from nltk.wsd import lesk
+from nltk import word_tokenize
+
+sentence1 = "Keep your savings in the bank"
+print(lesk(word_tokenize(sentence1), 'bank'))
+sentence2 = "It's so risky to drive over the banks of the road"
+print(lesk(word_tokenize(sentence2), 'bank'))
