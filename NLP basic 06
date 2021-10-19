@@ -1,0 +1,3 @@
+sentence = "I visited US form UK on 22-10-18"
+normalized_sentence = sentence.replace("US","United States").replace("UK","United Kingdom").replace("-18","-2018")
+print(normalized_sentence)
