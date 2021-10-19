@@ -1,0 +1,10 @@
+import nltk
+nltk.download('wordnet')
+from nltk.stem.wordnet import WordNetLemmatizer
+
+lemmatizer = WordNetLemmatizer()
+
+print(lemmatizer.lemmatize('product'))
+print(lemmatizer.lemmatize('production'))
+print(lemmatizer.lemmatize('coming'))
+print(lemmatizer.lemmatize('battle'))
