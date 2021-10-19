@@ -1,0 +1,11 @@
+import nltk
+from nltk import word_tokenize
+from autocorrect import spell
+
+print(spell('Natureal'))
+
+sentence = word_tokenize("Ntural Luanguage Processin deals with the art of extracting insightes from Natural Languages")
+print(sentence)
+
+sentence_corrected =' '.join([spell(word) for word in sentence])
+print(sentence_corrected)
