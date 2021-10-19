@@ -1,0 +1,7 @@
+import nltk
+stemmer = nltk.stem.PorterStemmer()
+
+print(stemmer.stem("production"))
+print(stemmer.stem("comming"))
+print(stemmer.stem("firing"))
+print(stemmer.stem("batting"))
