@@ -1,0 +1,4 @@
+import nltk
+from nltk.tokenize import sent_tokenize
+
+print(sent_tokenize("We are reading a book. Do you know who is the publisher? It is Packt. Packt is based out of Birmingham"))
