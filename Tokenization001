@@ -1,0 +1,6 @@
+import nltk
+nltk.download('punkt')
+from nltk import word_tokenize
+
+words = word_tokenize("I am reading NLP Fundamentals")
+print(words)
