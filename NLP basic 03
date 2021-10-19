@@ -1,0 +1,7 @@
+import nltk
+from nltk import word_tokenize
+nltk.download('averaged_perceptron_tagger')
+
+words = word_tokenize("I am reading NLP Fundamentals")
+print(words)
+print(nltk.pos_tag(words))
